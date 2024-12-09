@@ -1,0 +1,45 @@
+###raiz da aplicação
+GET http://localhost:5092
+
+###cadastrar aluno
+POST http://localhost:5092/api/aluno/cadastrar
+Content-Type: application/json
+
+{
+    "Nome": "Gabriel",
+    "DataNasimento": "2001-06-20"
+}
+
+###listar aluno
+GET http://localhost:5092/api/aluno/listar
+Content-Type: application/json
+
+###Buscar Aluno
+GET http://localhost:5092/api/aluno/2
+Content-Type: application/json
+
+### Cadastrar um novo IMC
+POST http://localhost:5092/api/imc/cadastrar
+Content-Type: application/json
+
+{
+    "AlunoId": 1,
+    "Altura": 1.77,
+    "Peso": 92
+}
+
+###listar iMCS  
+GET http://localhost:5092/api/imc/listar
+Content-Type: application/json
+
+### Alterar IMC
+PUT http://localhost:5092/api/imc/atualizar/1
+Content-Type: application/json
+
+{
+    "AlunoId": 1,
+    "Altura": 1.99,
+    "Peso": 300
+}
+
+
